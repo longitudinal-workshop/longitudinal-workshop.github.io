@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Longitudinal AI Workshop Schedule</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+/* #005A9C;
+--secondary-color: #F0F4F8;
+--text-color: #333333;
+--light-text-color: #555555;
+--border-color: #DEE2E6;
+--header-height: 70px;
+} */
+
+
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    html {
+        scroll-behavior: smooth;
+        scroll-padding-top: var(--header-height);
+    }
+
+    body {
+        font-family: 'Inter', sans-serif;
+        line-height: 1.6;
+        color: var(--text-color);
+        background-color: #FFFFFF;
+    }
+
+   .container {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    header {
+        background-color: #FFFFFF;
+        border-bottom: 1px solid var(--border-color);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        height: var(--header-height);
+        display: flex;
+        align-items: center;
+    }
+
+    header.container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+   .logo {
+        font-weight: 600;
+        font-size: 1.2rem;
+        color: var(--text-color);
+        text-decoration: none;
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        gap: 25px;
+    }
+
+    nav a {
+        text-decoration: none;
+        color: var(--light-text-color);
+        font-weight: 500;
+        transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+        color: var(--primary-color);
+    }
+
+    section {
+        padding: 80px 0;
+    }
+    
+    section:nth-child(odd) {
+        background-color: var(--secondary-color);
+    }
+
+    h1, h2, h3 {
+        margin-bottom: 20px;
+        line-height: 1.3;
+    }
+
+    h1 {
+        font-size: 2.8rem;
+        font-weight: 700;
+    }
+
+    h2 {
+        font-size: 2rem;
+        font-weight: 600;
+        border-bottom: 2px solid var(--primary-color);
+        padding-bottom: 10px;
+        display: inline-block;
+    }
+    
+    h3 {
+        font-size: 1.4rem;
+        font-weight: 600;
+        margin-top: 30px;
+    }
+
+    p {
+        margin-bottom: 15px;
+        color: var(--light-text-color);
+    }
+    
+    a {
+        color: var(--primary-color);
+        text-decoration: none;
+    }
+    
+    a:hover {
+        text-decoration: underline;
+    }
+
+   .hero {
+        padding-top: calc(var(--header-height) + 60px);
+        padding-bottom: 60px;
+        text-align: center;
+        background-color: #FFFFFF;
+    }
+
+   .hero h1 {
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+   .hero-subtitle {
+        font-size: 1.2rem;
+        color: var(--light-text-color);
+        margin-top: 10px;
+        margin-bottom: 30px;
+    }
+
+   .hero-tagline {
+        font-size: 1.5rem;
+        font-style: italic;
+        color: var(--text-color);
+        margin: 40px auto;
+        padding: 20px;
+        border-left: 4px solid var(--primary-color);
+        background-color: var(--secondary-color);
+        max-width: 700px;
+        text-align: left;
+    }
+
+   .cta-button {
+        display: inline-block;
+        background-color: var(--primary-color);
+        color: #FFFFFF;
+        padding: 15px 30px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1.1rem;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+   .cta-button:hover {
+        background-color: #00487B;
+        transform: translateY(-2px);
+        text-decoration: none;
+    }
+    
+   .schedule-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 30px;
+    }
+
+   .schedule-table th,.schedule-table td {
+        border: 1px solid var(--border-color);
+        padding: 12px 15px;
+        text-align: left;
+        vertical-align: top;
+    }
+
+   .schedule-table th {
+        background-color: var(--secondary-color);
+        font-weight: 600;
+    }
+    
+   .schedule-table td:first-child {
+        width: 15%;
+        font-weight: 500;
+    }
+    
+   .phase-header {
+        background-color: #e0e8ef;
+        font-weight: 700;
+    }
+    
+   .activity-title {
+        font-style: italic;
+        font-weight: 500;
+        text-decoration: underline;
+    }
+    
+   .organizer-list {
+        list-style: none;
+        padding: 0;
+        margin-top: 30px;
+        column-count: 2;
+        column-gap: 40px;
+    }
+    
+   .organizer-list li {
+        margin-bottom: 12px;
+        font-size: 1rem;
+    }
+
+    footer {
+        background-color: var(--text-color);
+        color: #FFFFFF;
+        text-align: center;
+        padding: 40px 20px;
+    }
+    
+    footer p {
+        color: #FFFFFF;
+        margin-bottom: 10px;
+    }
+
+    footer a {
+        color: #FFFFFF;
+        font-weight: 500;
+    }
+    
+    @media (max-width: 768px) {
+        h1 { font-size: 2.2rem; }
+        h2 { font-size: 1.8rem; }
+       .organizer-list { column-count: 1; }
+        header.container { flex-direction: column; height: auto; padding: 10px; }
+        nav ul { justify-content: center; width: 100%; padding-top: 10px; }
+        html { scroll-padding-top: 110px; }
+    }
+
+</style>
+
+    <div class="container">
+        <a href="#home" class="logo">Longitudinal AI Workshop</a>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#cfp">Call for Participants</a></li>
+                <li><a href="#schedule">Schedule</a></li>
+                <li><a href="#organizers">Organizers</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section id="home" class="hero">
+        <div class="container">
+            <br><br>
+            <h1>Facilitating Longitudinal Interaction Studies of AI Systems</h1>
+            <p class="hero-subtitle">@ UIST 2025  |  Sunday, September 28, 2025  |  Busan, Korea</p>
+            <a href="[https://forms.gle/9F3aW6b7c8d9E1fG8](https://forms.gle/9F3aW6b7c8d9E1fG8)" class="cta-button" target="_blank" rel="noopener noreferrer">Express Interest & Receive Updates</a>
+            <blockquote class="hero-tagline">
+                Every UIST system can be a test of time system.
+            </blockquote>
+            <p>This aspirational statement serves as the guiding vision for our workshop. The UIST community excels at creating robust, proof-of-concept prototypes that push the boundaries of interaction.[1] This workshop aims to build upon that strength, providing the tools and mindset to extend these innovations from the lab into the real world for sustained, long-term evaluation.</p>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2>About the Workshop</h2>
+            
+            <h3>The Challenge with AI Evaluation</h3>
+            <p>Researchers in the UIST community develop novel tools and systems to address complex user challenges. However, the true value and impact of these systems often cannot be captured in a single moment. User interactions with AI are not static; they evolve through continuous learning, adaptation, and even repurposing of the technology over days, weeks, or months. Consequently, traditional one-time evaluations are insufficient for understanding these rich, long-term dynamics. Capturing this evolution requires longitudinal research, yet such studies have historically been difficult to implement due to significant challenges in deployment, evaluation design, and data collection.</p>
+
+            <h3>Our Mission</h3>
+            <p>This workshop directly confronts these obstacles by preparing researchers with practical strategies for conducting meaningful longitudinal studies. Our primary goal is to bridge the gap between UIST's strength in building innovative prototypes and the need for real-world, sustained deployment—a challenge critical to both academic research and industry. By bringing together a diverse group of experts, we seek to foster a vibrant community around longitudinal systems research and promote it as a more widely embraced method for designing, building, and evaluating the next generation of UIST tools.</p>
+            
+            <h3>What to Expect</h3>
+            <p>This one-day workshop is designed to be highly interactive and hands-on, moving beyond theoretical discussions to provide tangible skills. The format is similar to other productive UIST workshops that blend different modes of engagement.[2, 3] Participants will:</p>
+            <ul>
+                <li>Hear a keynote from a leading expert on industry-based longitudinal research.</li>
+                <li>Engage with an industry panel of product managers and user researchers on how they track user behavior and product adoption over time.</li>
+                <li>Participate in interactive breakout groups for hands-on study protocol design.</li>
+                <li>Join collaborative sessions to prototype AI tools tailored for longitudinal data collection and analysis.</li>
+                <li>Contribute to building a community repository of tools and frameworks for longitudinal studies.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="cfp">
+        <div class="container">
+            <h2>Call for Participants</h2>
+            <p>To ensure a highly interactive and collaborative environment, participation is limited and will be based on a review of submitted position papers. This format, common in specialized academic workshops, allows organizers to curate a group with diverse and relevant interests, fostering productive discussion.[4]</p>
+
+            <h3>Who Should Attend</h3>
+            <p>We invite researchers, PhD students, and practitioners from Human-Computer Interaction (HCI), Artificial Intelligence (AI), design, and related fields who are interested in or actively working on longitudinal studies of interactive systems. We welcome participants with all levels of experience—from those new to the topic to seasoned experts—who are keen to share their challenges, ideas, and work in progress.</p>
+
+            <h3>How to Participate</h3>
+            <p>Prospective participants should submit a 2-4 page position paper in the <a href="[https://www.acm.org/publications/proceedings-template](https://www.acm.org/publications/proceedings-template)" target="_blank" rel="noopener noreferrer">ACM Primary Article Template</a> format (single-column). Your paper should outline your research interests, relevant experience, or challenges you have faced or anticipate in conducting longitudinal studies. Topics of interest include, but are not limited to:</p>
+            <ul>
+                <li>Strategies for deploying and maintaining systems for long-term use.</li>
+                <li>Novel methodologies for evaluating user adaptation and learning over time.</li>
+                <li>Techniques and tools for collecting, managing, and analyzing longitudinal data.</li>
+                <li>Ethical considerations specific to long-term user studies.</li>
+                <li>Case studies of successful or challenging longitudinal research.</li>
+                <li>Ideas for AI-powered tools that could facilitate longitudinal studies.</li>
+            </ul>
+            <p style="margin-top:20px;">To foster a highly interactive and collaborative environment, we are targeting an attendance of 30-35 participants.</p>
+
+            <h3>Important Dates</h3>
+            <ul>
+                <li><strong>Submission Deadline:</strong> Friday, July 11, 2025 (This date is aligned with the official UIST 2025 deadline for workshop contributions [1, 5]).</li>
+                <li><strong>Notification of Acceptance:</strong> Friday, August 1, 2025</li>
+                <li><strong>Workshop Date:</strong> Sunday, September 28, 2025</li>
+            </ul>
+            <p style="margin-top:30px;"><a href="mailto:long@cs.columbia.edu?subject=UIST 2025 Longitudinal AI Workshop Submission" class="cta-button">Submit Your Paper</a></p>
+        </div>
+    </section>
+
+    <section id="schedule">
+        <div class="container">
+            <h2>Workshop Schedule</h2>
+            <p>Our one-day workshop is structured into four distinct phases, designed to move from foundational knowledge to hands-on application and future planning.</p>
+            
+            <table class="schedule-table">
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Activity</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="phase-header">
+                        <td colspan="3"><strong>Phase 1 (9:00–11:00) — Welcome, Introduction, and Familiarizing with Longitudinal Practices</strong></td>
+                    </tr>
+                    <tr>
+                        <td>9:00–9:30</td>
+                        <td><span class="activity-title">Opening Presentation</span></td>
+                        <td>Organizers will welcome participants and introduce key concepts, practices, and examples of longitudinal HCI research.</td>
+                    </tr>
+                    <tr>
+                        <td>9:30–10:30</td>
+                        <td><span class="activity-title">Participant Introductions</span></td>
+                        <td>Each participant will give a short self-introduction, referencing their submitted work and research interests to build a shared understanding of backgrounds and goals.</td>
+                    </tr>
+                    <tr>
+                        <td>10:30–11:00</td>
+                        <td><span class="activity-title">Keynote Talk & Q&A</span></td>
+                        <td>A presentation by our tentative keynote speaker, <strong>Tesh Goyal</strong> (Google DeepMind), a leading expert in industry-based longitudinal research and responsible AI.[6, 7] He will discuss tools and products developed for long-term user evaluation.</td>
+                    </tr>
+                    <tr class="phase-header">
+                        <td colspan="3"><strong>Phase 2 (11:00–12:00, 13:15–14:00) — Navigating the Challenges of Longitudinal Studies</strong></td>
+                    </tr>
+                    <tr>
+                        <td>11:00–12:00</td>
+                        <td><span class="activity-title">Table Activity #1: Identifying Challenges</span></td>
+                        <td>In interest-based groups, participants will share their work and collaboratively identify key challenges in conducting longitudinal studies, using a guided framework.</td>
+                    </tr>
+                    <tr>
+                        <td>13:15–14:00</td>
+                        <td><span class="activity-title">Industry Panel</span></td>
+                        <td>Following an optional group lunch, a panel of product managers and user research experts will discuss how their work relates to longitudinal themes like tracking user behavior, iterative development, and product adoption, bridging academic and industry practices.</td>
+                    </tr>
+                    <tr class="phase-header">
+                        <td colspan="3"><strong>Phase 3 (14:00–16:00) — Gaining Hands-on Experience</strong></td>
+                    </tr>
+                    <tr>
+                        <td>14:00–15:00</td>
+                        <td><span class="activity-title">Table Activity #2: Study Protocol Design</span></td>
+                        <td>Participants will work in pairs to design a new longitudinal study protocol, including research questions, methodologies, recruitment, and pilot testing, based on specific scenario constraints.</td>
+                    </tr>
+                    <tr>
+                        <td>15:00–16:00</td>
+                        <td><span class="activity-title">Table Activity #3: System Prototyping</span></td>
+                        <td>Participants will prototype an AI tool to support their proposed study, sketching wireframes and designing system logging structures for longitudinal data collection.</td>
+                    </tr>
+                    <tr class="phase-header">
+                        <td colspan="3"><strong>Phase 4 (16:00–17:00) — Reflection, Summary, and Future</span></td>
+                    </tr>
+                    <tr>
+                        <td>16:00–16:40</td>
+                        <td><span class="activity-title">Table Activity #4: Reflection</span></td>
+                        <td>Participants will document their designs and insights, tracing the evolution of their ideas. Organizers will initiate the development of a shared framework or toolkit repository to foster future collaboration.</td>
+                    </tr>
+                    <tr>
+                        <td>16:40–17:00</td>
+                        <td><span class="activity-title">Closing Remarks</span></td>
+                        <td>The session will conclude with a short keynote by <strong>Lydia Chilton</strong> (Columbia University) [8, 9], a group photo, and post-workshop planning to establish a lasting community via a Discord server or mailing list.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section id="organizers">
+        <div class="container">
+            <h2>Organizing Committee</h2>
+            <p>This workshop is organized by a diverse team of leading researchers and practitioners from world-class academic institutions and pioneering industry labs. This unique blend of expertise is central to the workshop's mission of bridging the gap between foundational academic research and real-world industrial application. The organizers' collective experience spans human-computer interaction, artificial intelligence, computational design, and the deployment of large-scale, long-term systems. Providing direct links to their professional pages allows attendees to explore their work, fostering transparency and building confidence in the quality of the workshop.</p>
+            <ul class="organizer-list">
+                <li><a href="[https://iamtaolong.github.io/](https://iamtaolong.github.io/)" target="_blank" rel="noopener noreferrer">Tao Long</a>, Columbia University [10]</li>
+                <li><a href="[https://sitong-wang.github.io/](https://sitong-wang.github.io/)" target="_blank" rel="noopener noreferrer">Sitong Wang</a>, Columbia University [11]</li>
+                <li><a href="[https://emiliefab.re/](https://emiliefab.re/)" target="_blank" rel="noopener noreferrer">Émilie Fabre</a>, University of Tokyo [12]</li>
+                <li><a href="[https://www.tonyywang.com/](https://www.tonyywang.com/)" target="_blank" rel="noopener noreferrer">Tony Wang</a>, Cornell University [13]</li>
+                <li><a href="[https://anupsathya.com/](https://anupsathya.com/)" target="_blank" rel="noopener noreferrer">Anup Sathya</a>, University of Chicago [14]</li>
+                <li><a href="[https://jasonwunix.com/](https://jasonwunix.com/)" target="_blank" rel="noopener noreferrer">Jason Wu</a>, Apple [15]</li>
+                <li><a href="[https://savvaspetridis.github.io/](https://savvaspetridis.github.io/)" target="_blank" rel="noopener noreferrer">Savvas Petridis</a>, Google DeepMind [16]</li>
+                <li><a href="[https://dingzeyu.li/](https://dingzeyu.li/)" target="_blank" rel="noopener noreferrer">Dingzeyu Li</a>, Adobe Research [17]</li>
+                <li><a href="[https://tuhinjubcse.github.io/](https://tuhinjubcse.github.io/)" target="_blank" rel="noopener noreferrer">Tuhin Chakrabarty</a>, Salesforce AI Research [18]</li>
+                <li><a href="[https://www.aalto.fi/en/people/yue-jiang](https://www.aalto.fi/en/people/yue-jiang)" target="_blank" rel="noopener noreferrer">Yue Jiang</a>, Aalto University & University of Utah [19]</li>
+                <li><a href="[https://jingyi.me/](https://jingyi.me/)" target="_blank" rel="noopener noreferrer">Jingyi Li</a>, Pomona College [20]</li>
+                <li><a href="[https://tifftseng.com/](https://tifftseng.com/)" target="_blank" rel="noopener noreferrer">Tiffany Tseng</a>, Barnard College [21]</li>
+                <li><a href="[https://www.media.mit.edu/people/ken_n/overview/](https://www.media.mit.edu/people/ken_n/overview/)" target="_blank" rel="noopener noreferrer">Ken Nakagaki</a>, University of Chicago [22]</li>
+                <li><a href="[https://qianyang.co/](https://qianyang.co/)" target="_blank" rel="noopener noreferrer">Qian Yang</a>, Cornell University [23]</li>
+                <li><a href="[http://nikmartelaro.com/](http://nikmartelaro.com/)" target="_blank" rel="noopener noreferrer">Nikolas Martelaro</a>, Carnegie Mellon University [24]</li>
+                <li><a href="[https://www.stevens.edu/profile/jnickers](https://www.stevens.edu/profile/jnickers)" target="_blank" rel="noopener noreferrer">Jeffrey Nickerson</a>, Stevens Institute of Technology [25]</li>
+                <li><a href="[https://www.cs.columbia.edu/~chilton/](https://www.cs.columbia.edu/~chilton/)" target="_blank" rel="noopener noreferrer">Lydia Chilton</a>, Columbia University [9]</li>
+            </ul>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <div class="container">
+        <p>This workshop is part of the <a href="[https://uist.acm.org/2025/](https://uist.acm.org/2025/)" target="_blank" rel="noopener noreferrer">ACM Symposium on User Interface Software and Technology (UIST) 2025</a>.</p>
+        <p>UIST 2025 will be held in-person in Busan, Korea. The conference venue is the Paradise Hotel in Haeundae.[26, 27]</p>
+        <p>For any questions, please contact the lead organizers: <a href="mailto:long@cs.columbia.edu">long@cs.columbia.edu</a> or <a href="mailto:chilton@cs.columbia.edu">chilton@cs.columbia.edu</a>.</p>
+    </div>
+</footer>
+
+
+</html>
