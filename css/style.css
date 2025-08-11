@@ -30,6 +30,10 @@
     padding: 0;
 }
 
+main {
+    margin-top: -2.5rem;
+}
+
 html {
     scroll-behavior: smooth;
     scroll-padding-top: var(--header-height);
@@ -230,9 +234,10 @@ nav a:hover {
 /* Highlight Effect */
 .highlight {
     font-weight: bolder;
-    background: linear-gradient(104deg, rgba(130, 255, 173,0) 0.9%, rgba(130, 255, 173,1.25) 2.4%, rgba(130, 255, 173,0.5) 5.8%, rgba(130, 255, 173,0.1) 93%, rgba(130, 255, 173,0.7) 96%, rgba(130, 255, 1732,0) 98%), linear-gradient(183deg, rgba(130, 255, 173,0) 0%, rgba(130, 255, 173,0.3) 7.9%, rgba(130, 255, 173,0) 15%);
+    background: linear-gradient(104deg, rgba(116, 251, 211,0) 0.9%, rgba(116, 251, 211,1.25) 2.4%, rgba(116, 251, 211,0.5) 5.8%, rgba(116, 251, 211,0.1) 93%, rgba(116, 251, 211,0.7) 96%, rgba(116, 251, 211,0) 98%), linear-gradient(183deg, rgba(116, 251, 211,0) 0%, rgba(116, 251, 211,0.3) 7.9%, rgba(116, 251, 211,0) 15%);
     padding-right: 15px;
     -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
     margin: 0;
     border-radius: 7.5px;
 }
@@ -240,14 +245,14 @@ nav a:hover {
 /* CTA Button */
 .cta-button {
     display: inline-block;
-    background-color: #def6d8;
+    background-color: #74FBD3;
     color: #222;
     padding: 15px 30px;
     border-radius: 80px;
     text-decoration: none;
     font-weight: 500;
     font-size: 1.15rem;
-    border: 7px solid #ffffff7b;
+    /* border: 7px solid #74FBD3; */
     position: relative;
     overflow: visible;
     transition: background-color 0.3s ease, transform 0.2s ease;
@@ -258,8 +263,9 @@ nav a:hover {
 }
 
 .cta-button:hover {
-    background-color: #73fc9c;
+    background-color: #04A777;
     transform: translateY(-2px);
+    color: #fff !important;
     text-decoration: none;
 }
 
@@ -490,15 +496,6 @@ footer a {
     nav ul { justify-content: center; width: 100%; padding-top: 10px; }
     html { scroll-padding-top: 110px; }
     .container { padding-left: 8vw; padding-right: 8vw; }
-}
-
-/* Icon Styles */
-.fa-external-link,
-.fa-external-link-alt,
-.fa.fa-external-link,
-.external-link-icon {
-    font-size: 0.85em !important;
-    vertical-align: baseline !important;
 }
 
 /* New classes for extracted inline styles */

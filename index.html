@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <title>UIST'25 Workshop on Longitudinal AI Workshop </title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <header>
@@ -37,8 +36,8 @@
                     <span class="cta-dot dot1"></span>
                     <span class="cta-dot dot2"></span>
                 </span>
-               <span class="highlight"> &nbsp;&nbsp;&nbsp; in-person workshop registration (first come, first serve!)&nbsp;&nbsp;&nbsp;
-            </a></span>
+               <span>in-person workshop registration (first come, first serve!)</span>
+            </a>
             <!-- <p style="color:grey">questions? <a href="mailto:long@columbia.edu,chilton@columbia.edu">{long, chilton}@columbia.edu</a>.
             </p> -->
             <!-- <blockquote class="hero-tagline">
@@ -247,11 +246,28 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('a').forEach(function(link) {
         // Skip nav bar links and logo
         if (link.closest('nav') || link.classList.contains('logo')) return;
-        var icon = document.createElement('i');
-        icon.className = 'fa fa-external-link external-link-icon';
-        icon.setAttribute('aria-hidden', 'true');
-        link.appendChild(document.createTextNode(' '));
-        link.appendChild(icon);
+        
+        var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+        svg.setAttribute("width", "24");
+        svg.setAttribute("height", "24"); 
+        svg.setAttribute("viewBox", "0 0 24 24");
+        svg.setAttribute("fill", "none");
+        svg.classList.add("external-link-icon");
+        svg.setAttribute("aria-hidden", "true");
+
+        var path1 = document.createElementNS("http://www.w3.org/2000/svg", "path");
+        path1.setAttribute("d", "M15.6396 7.02527H12.0181V5.02527H19.0181V12.0253H17.0181V8.47528L12.1042 13.3892L10.6899 11.975L15.6396 7.02527Z");
+        path1.setAttribute("fill", "currentColor");
+
+        var path2 = document.createElementNS("http://www.w3.org/2000/svg", "path");
+        path2.setAttribute("d", "M10.9819 6.97473H4.98193V18.9747H16.9819V12.9747H14.9819V16.9747H6.98193V8.97473H10.9819V6.97473Z");
+        path2.setAttribute("fill", "currentColor");
+
+        svg.appendChild(path1);
+        svg.appendChild(path2);
+        
+        link.appendChild(document.createTextNode(' '));
+        link.appendChild(svg);
     });
 });
 </script>
