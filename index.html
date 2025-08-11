@@ -245,20 +245,6 @@
     </script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Handle image errors
-            function handleImageError(img) {
-                img.style.background = '#fff';
-                img.style.border = '1.5px solid rgba(0,0,0,0.08)';
-                img.src = '';
-            }
-            
-            // Add error handlers to all images
-            document.querySelectorAll('img').forEach(function(img) {
-                img.addEventListener('error', function() {
-                    handleImageError(this);
-                });
-            });
-            
             document.querySelectorAll('a').forEach(function(link) {
                 // Skip nav bar links and logo
                 if (link.closest('nav') || link.classList.contains('logo')) return;
