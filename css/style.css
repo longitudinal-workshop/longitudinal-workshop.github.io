@@ -205,6 +205,62 @@ nav a:hover {
     padding-bottom: 60px;
     text-align: center;
     background-color: #FFFFFF;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Binary Clock Background */
+.binary-clock-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    margin-bottom: 5rem;
+    margin-top: -5rem;
+}
+
+.binary-clock {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transform: scale(2);
+}
+
+.clock-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.clock-label {
+    font-family: 'Courier New', monospace;
+    font-size: 12px;
+    font-weight: bold;
+    color: var(--text-color);
+    width: 20px;
+    text-align: center;
+}
+
+.binary-digits {
+    display: flex;
+    gap: 8px;
+}
+
+.binary-digit {
+    width: 15px;
+    height: 15px;
+    border: 1px solid var(--text-color);
+    transition: background-color 0.3s ease;
+}
+
+.binary-digit.active {
+    background-color: #74FBD3;
+}
+
+.binary-digit.inactive {
+    background-color: transparent;
 }
 
 .hero h1 {

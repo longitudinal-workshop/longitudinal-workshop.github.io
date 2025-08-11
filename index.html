@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>UIST'25 Workshop on Longitudinal AI Workshop </title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <title>UIST'25 Workshop on Longitudinal AI Workshop </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <header>
     <div class="container header-container">
@@ -27,16 +27,32 @@
 <main>
     <section id="home" class="hero">
         <div class="container">
+            <!-- Binary Clock Background -->
+             <div class="binary-clock-container">
+                <div class="binary-clock">
+                    <div class="clock-row">
+                        <div class="clock-label">h</div>
+                        <div class="binary-digits" id="hours"></div>
+                    </div>
+                    <div class="clock-row">
+                        <div class="clock-label">m</div>
+                        <div class="binary-digits" id="minutes"></div>
+                    </div>
+                    <div class="clock-row">
+                        <div class="clock-label">s</div>
+                        <div class="binary-digits" id="seconds"></div>
+                    </div>
+                </div>
+            </div>
             <p class="hero-subtitle">UIST '25  Workshop @ Busan, Korea</p>
             <h1>Facilitating <span class="highlight highlight-bold"> Longitudinal Interaction </span> Studies of AI Systems</h1>
-            <p class="hero-subtitle">Sunday, September 28, 2025</p>
-            <br><br>        
+            <p class="hero-subtitle">Sunday, September 28, 2025</p>     
             <a href="" class="cta-button cta-button-inline" target="_blank" rel="noopener noreferrer">
-                <span class="rotating-dots">
+                <!-- <span class="rotating-dots">
                     <span class="cta-dot dot1"></span>
                     <span class="cta-dot dot2"></span>
-                </span>
-               <span>in-person workshop registration (first come, first serve!)</span>
+                </span> -->
+                <span>in-person workshop registration (first come, first serve!)</span>
             </a>
             <!-- <p style="color:grey">questions? <a href="mailto:long@columbia.edu,chilton@columbia.edu">{long, chilton}@columbia.edu</a>.
             </p> -->
@@ -46,7 +62,7 @@
             <!-- <p>This aspirational statement serves as the guiding vision for our workshop. The UIST community excels at creating robust, proof-of-concept prototypes that push the boundaries of interaction.[1] This workshop aims to build upon that strength, providing the tools and mindset to extend these innovations from the lab into the real world for sustained, long-term evaluation.</p> -->
         </div>
     </section>
-
+    
     <section id="about">
         <div class="container">
             <h2>1/ About: <span class="text-secondary">Why this Workshop?</span></h2>
@@ -55,17 +71,17 @@
             <!-- <h3> Oppotunties from AI adavcnement: easier to (re-)deploy AI systems + user knowledge literacy to ai systems =>>  people's einteraction with systems over tiem changes..</h3> 
             <p>Still remmeber your first time using GPT or Dall-E to do task? Im suretrhogout th eway you learned sth. </p> -->
             <p class="text-secondary">Researchers in the UIST community develop novel tools and systems to address complex user challenges. Recent AI advances further lower the cost and barriers to turning ideas into functional AI prototypes and (re-)deploying them quickly.</p>
-
+            
             <p class="text-secondary">However, <span class="highlight highlight-bold">the true value and impact of these AI systems often cannot be captured in a single moment</span>. User interactions with AI are not static; they evolve through continuous learning, adaptation, and even repurposing of the technology over days, weeks, or months. Consequently, traditional one-time evaluations are insufficient for understanding these rich, long-term dynamics. Capturing this evolution requires longitudinal research, yet such studies have historically been difficult to implement due to significant challenges in deployment, evaluation design, and data collection.</p>
-        
-        
+            
+            
             <h3>Our Mission</h3>
             <p class="text-secondary">This workshop directly confronts these obstacles by <span class="highlight highlight-bold">preparing researchers with practical strategies for conducting meaningful AI longitudinal studies</span>. Our primary goal is to bridge the gap between UIST's strength in building innovative prototypes and the need for real-world, sustained deployment—a challenge critical to both academic research and industry. By bringing together a diverse group of experts, we seek to foster a vibrant community around longitudinal systems research and promote it as a more widely embraced method for designing, building, and evaluating the next generation of UIST tools.</p>
             <!-- <ul style="margin-left: 20px;">
-              <li>Prepare UIST researchers with practical strategies for studying how users live with AI tools over days, weeks, and months.</li>
-              <li>Bridge the gap between fast prototyping and long-term evaluation.</li>
-              <li>Encourage research on emerging behaviors: memory, habit, trust, breakdowns, and appropriation of AI systems.</li>
-              <li>Foster a growing community committed to making longitudinal methods core to HCI and AI system design.</li>
+                <li>Prepare UIST researchers with practical strategies for studying how users live with AI tools over days, weeks, and months.</li>
+                <li>Bridge the gap between fast prototyping and long-term evaluation.</li>
+                <li>Encourage research on emerging behaviors: memory, habit, trust, breakdowns, and appropriation of AI systems.</li>
+                <li>Foster a growing community committed to making longitudinal methods core to HCI and AI system design.</li>
             </ul> -->
             
             <!-- <h3>What to Expect</h3>
@@ -79,14 +95,14 @@
             </ul> -->
         </div>
     </section>
-
+    
     <section id="cfp">
         <div class="container">
             <h2>2/ Call for Participants</h2>
             <p>To ensure ....</p>
         </div>
     </section>
-
+    
     <section id="schedule">
         <div class="container">
             <h2>3/ Workshop Schedule</h2>
@@ -147,128 +163,189 @@
                     </tr>
                     <tr class="phase-header">
                         <td colspan="3"><strong>Phase 4 (16:00–17:00) — Reflection, Summary, and Future</span></td>
-                    </tr>
-                    <tr>
-                        <td>16:00–16:40</td>
-                        <td><span class="activity-title">Table Activity #4: Reflection</span></td>
-                        <td>Participants will document their designs and insights, tracing the evolution of their ideas. Organizers will initiate the development of a shared framework or toolkit repository to foster future collaboration.</td>
-                    </tr>
-                    <tr>
-                        <td>16:40–17:00</td>
-                        <td><span class="activity-title">Closing Remarks</span></td>
-                        <td>The session will conclude with a short keynote by <strong>Lydia Chilton</strong> (Columbia University) [8, 9], a group photo, and post-workshop planning to establish a lasting community via a Discord server or mailing list.</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </section>
-
-    <section id="organizers">
-        <div class="container">
-            <h2>4/ Organizing Committee</h2>
-            <p>This workshop is organized by a diverse team of leading researchers and practitioners from world-class academic institutions and pioneering industry labs. This unique blend of expertise is central to the workshop's mission of bridging the gap between foundational academic research and real-world industrial application. The organizers' collective experience spans human-computer interaction, artificial intelligence, computational design, and the deployment of large-scale, long-term systems. Providing direct links to their professional pages allows attendees to explore their work, fostering transparency and building confidence in the quality of the workshop.</p>
-            <p>If you have any questions, don't hesitate to reach out to <a href="mailto:long@columbia.edu,chilton@columbia.edu">{long, chilton}@columbia.edu</a>.
-            </p>
-            <ul class="organizer-list">
-                <li><img src="Tao.jpg" alt="Tao"><a href="https://iamtaolong.github.io/" target="_blank" rel="noopener noreferrer">Tao Long</a><span class="affiliation">Columbia University</span></li>
-                <li><img src="Sitong.jpg" alt="Sitong"><a href="https://sitong-wang.github.io/" target="_blank" rel="noopener noreferrer">Sitong Wang</a><span class="affiliation">Columbia University</span></li>
-                <li><img src="Émilie.jpg" alt="Émilie"><a href="https://emiliefab.re/" target="_blank" rel="noopener noreferrer">Émilie Fabre</a><span class="affiliation">University of Tokyo</span></li>
-                <li><img src="Tony.jpg" alt="Tony"><a href="https://www.tonyywang.com/" target="_blank" rel="noopener noreferrer">Tony Wang</a><span class="affiliation">Cornell University</span></li>
-                <li><img src="Anup.jpg" alt="Anup"><a href="https://anupsathya.com/" target="_blank" rel="noopener noreferrer">Anup Sathya</a><span class="affiliation">University of Chicago</span></li>
-                <li><img src="Jason.jpg" alt="Jason"><a href="https://jasonwunix.com/" target="_blank" rel="noopener noreferrer">Jason Wu</a><span class="affiliation">Apple</span></li>
-                <li><img src="Savvas.jpg" alt="Savvas"><a href="https://savvaspetridis.github.io/" target="_blank" rel="noopener noreferrer">Savvas Petridis</a><span class="affiliation">Google DeepMind</span></li>
-                <li><img src="Dingzeyu.jpg" alt="Dingzeyu"><a href="https://dingzeyu.li/" target="_blank" rel="noopener noreferrer">Dingzeyu Li</a><span class="affiliation">Adobe Research</span></li>
-                <li><img src="Tuhin.jpg" alt="Tuhin"><a href="https://tuhinjubcse.github.io/" target="_blank" rel="noopener noreferrer">Tuhin Chakrabarty</a><span class="affiliation">Salesforce AI Research</span></li>
-                <li><img src="Yue.jpg" alt="Yue"><a href="https://www.aalto.fi/en/people/yue-jiang" target="_blank" rel="noopener noreferrer">Yue Jiang</a><span class="affiliation">Aalto University & University of Utah</span></li>
-                <li><img src="Jingyi.jpg" alt="Jingyi"><a href="https://jingyi.me/" target="_blank" rel="noopener noreferrer">Jingyi Li</a><span class="affiliation">Pomona College</span></li>
-                <li><img src="Tiffany.jpg" alt="Tiffany"><a href="https://tifftseng.com/" target="_blank" rel="noopener noreferrer">Tiffany Tseng</a><span class="affiliation">Barnard College</span></li>
-                <li><img src="Ken.jpg" alt="Ken"><a href="https://www.media.mit.edu/people/ken_n/overview/" target="_blank" rel="noopener noreferrer">Ken Nakagaki</a><span class="affiliation">University of Chicago</span></li>
-                <li><img src="Qian.jpg" alt="Qian"><a href="https://qianyang.co/" target="_blank" rel="noopener noreferrer">Qian Yang</a><span class="affiliation">Cornell University</span></li>
-                <li><img src="Nikolas.jpg" alt="Nikolas"><a href="http://nikmartelaro.com/" target="_blank" rel="noopener noreferrer">Nikolas Martelaro</a><span class="affiliation">Carnegie Mellon University</span></li>
-                <li><img src="Jeffrey.jpg" alt="Jeffrey"><a href="https://www.stevens.edu/profile/jnickers" target="_blank" rel="noopener noreferrer">Jeffrey Nickerson</a><span class="affiliation">Stevens Institute of Technology</span></li>
-                <li><img src="Lydia.jpg" alt="Lydia"><a href="https://www.cs.columbia.edu/~chilton/" target="_blank" rel="noopener noreferrer">Lydia Chilton</a><span class="affiliation">Columbia University</span></li>
-            </ul>
-        </div>
-    </section>
-
-</main>
-<script>
-(function() {
-    // Hamburger menu toggle
-    const hamburger = document.getElementById('hamburger');
-    const navList = document.getElementById('nav-list');
-    if (hamburger && navList) {
-        hamburger.addEventListener('click', function() {
-            navList.classList.toggle('open');
-        });
-        hamburger.addEventListener('keypress', function(e) {
-            if (e.key === 'Enter' || e.key === ' ') navList.classList.toggle('open');
-        });
-    }
-
-    // Scrollspy for nav highlighting
-    const navLinks = document.querySelectorAll('nav a[data-section]');
-    const sections = Array.from(navLinks).map(link => document.getElementById(link.getAttribute('href').replace('#','')));
-    function onScroll() {
-        let scrollPos = window.scrollY + 80; // offset for header
-        let activeIdx = 0;
-        for (let i = 0; i < sections.length; i++) {
-            if (sections[i] && sections[i].offsetTop <= scrollPos) {
-                activeIdx = i;
+                        </tr>
+                        <tr>
+                            <td>16:00–16:40</td>
+                            <td><span class="activity-title">Table Activity #4: Reflection</span></td>
+                            <td>Participants will document their designs and insights, tracing the evolution of their ideas. Organizers will initiate the development of a shared framework or toolkit repository to foster future collaboration.</td>
+                        </tr>
+                        <tr>
+                            <td>16:40–17:00</td>
+                            <td><span class="activity-title">Closing Remarks</span></td>
+                            <td>The session will conclude with a short keynote by <strong>Lydia Chilton</strong> (Columbia University) [8, 9], a group photo, and post-workshop planning to establish a lasting community via a Discord server or mailing list.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        
+        <section id="organizers">
+            <div class="container">
+                <h2>4/ Organizing Committee</h2>
+                <p>This workshop is organized by a diverse team of leading researchers and practitioners from world-class academic institutions and pioneering industry labs. This unique blend of expertise is central to the workshop's mission of bridging the gap between foundational academic research and real-world industrial application. The organizers' collective experience spans human-computer interaction, artificial intelligence, computational design, and the deployment of large-scale, long-term systems. Providing direct links to their professional pages allows attendees to explore their work, fostering transparency and building confidence in the quality of the workshop.</p>
+                <p>If you have any questions, don't hesitate to reach out to <a href="mailto:long@columbia.edu,chilton@columbia.edu">{long, chilton}@columbia.edu</a>.
+                </p>
+                <ul class="organizer-list">
+                    <li><img src="Tao.jpg" alt="Tao"><a href="https://iamtaolong.github.io/" target="_blank" rel="noopener noreferrer">Tao Long</a><span class="affiliation">Columbia University</span></li>
+                    <li><img src="Sitong.jpg" alt="Sitong"><a href="https://sitong-wang.github.io/" target="_blank" rel="noopener noreferrer">Sitong Wang</a><span class="affiliation">Columbia University</span></li>
+                    <li><img src="Émilie.jpg" alt="Émilie"><a href="https://emiliefab.re/" target="_blank" rel="noopener noreferrer">Émilie Fabre</a><span class="affiliation">University of Tokyo</span></li>
+                    <li><img src="Tony.jpg" alt="Tony"><a href="https://www.tonyywang.com/" target="_blank" rel="noopener noreferrer">Tony Wang</a><span class="affiliation">Cornell University</span></li>
+                    <li><img src="Anup.jpg" alt="Anup"><a href="https://anupsathya.com/" target="_blank" rel="noopener noreferrer">Anup Sathya</a><span class="affiliation">University of Chicago</span></li>
+                    <li><img src="Jason.jpg" alt="Jason"><a href="https://jasonwunix.com/" target="_blank" rel="noopener noreferrer">Jason Wu</a><span class="affiliation">Apple</span></li>
+                    <li><img src="Savvas.jpg" alt="Savvas"><a href="https://savvaspetridis.github.io/" target="_blank" rel="noopener noreferrer">Savvas Petridis</a><span class="affiliation">Google DeepMind</span></li>
+                    <li><img src="Dingzeyu.jpg" alt="Dingzeyu"><a href="https://dingzeyu.li/" target="_blank" rel="noopener noreferrer">Dingzeyu Li</a><span class="affiliation">Adobe Research</span></li>
+                    <li><img src="Tuhin.jpg" alt="Tuhin"><a href="https://tuhinjubcse.github.io/" target="_blank" rel="noopener noreferrer">Tuhin Chakrabarty</a><span class="affiliation">Salesforce AI Research</span></li>
+                    <li><img src="Yue.jpg" alt="Yue"><a href="https://www.aalto.fi/en/people/yue-jiang" target="_blank" rel="noopener noreferrer">Yue Jiang</a><span class="affiliation">Aalto University & University of Utah</span></li>
+                    <li><img src="Jingyi.jpg" alt="Jingyi"><a href="https://jingyi.me/" target="_blank" rel="noopener noreferrer">Jingyi Li</a><span class="affiliation">Pomona College</span></li>
+                    <li><img src="Tiffany.jpg" alt="Tiffany"><a href="https://tifftseng.com/" target="_blank" rel="noopener noreferrer">Tiffany Tseng</a><span class="affiliation">Barnard College</span></li>
+                    <li><img src="Ken.jpg" alt="Ken"><a href="https://www.media.mit.edu/people/ken_n/overview/" target="_blank" rel="noopener noreferrer">Ken Nakagaki</a><span class="affiliation">University of Chicago</span></li>
+                    <li><img src="Qian.jpg" alt="Qian"><a href="https://qianyang.co/" target="_blank" rel="noopener noreferrer">Qian Yang</a><span class="affiliation">Cornell University</span></li>
+                    <li><img src="Nikolas.jpg" alt="Nikolas"><a href="http://nikmartelaro.com/" target="_blank" rel="noopener noreferrer">Nikolas Martelaro</a><span class="affiliation">Carnegie Mellon University</span></li>
+                    <li><img src="Jeffrey.jpg" alt="Jeffrey"><a href="https://www.stevens.edu/profile/jnickers" target="_blank" rel="noopener noreferrer">Jeffrey Nickerson</a><span class="affiliation">Stevens Institute of Technology</span></li>
+                    <li><img src="Lydia.jpg" alt="Lydia"><a href="https://www.cs.columbia.edu/~chilton/" target="_blank" rel="noopener noreferrer">Lydia Chilton</a><span class="affiliation">Columbia University</span></li>
+                </ul>
+            </div>
+        </section>
+        
+    </main>
+    <script>
+        (function() {
+            // Hamburger menu toggle
+            const hamburger = document.getElementById('hamburger');
+            const navList = document.getElementById('nav-list');
+            if (hamburger && navList) {
+                hamburger.addEventListener('click', function() {
+                    navList.classList.toggle('open');
+                });
+                hamburger.addEventListener('keypress', function(e) {
+                    if (e.key === 'Enter' || e.key === ' ') navList.classList.toggle('open');
+                });
             }
-        }
-        navLinks.forEach((link, idx) => {
-            if (idx === activeIdx) link.classList.add('active');
-            else link.classList.remove('active');
+            
+            // Scrollspy for nav highlighting
+            const navLinks = document.querySelectorAll('nav a[data-section]');
+            const sections = Array.from(navLinks).map(link => document.getElementById(link.getAttribute('href').replace('#','')));
+            function onScroll() {
+                let scrollPos = window.scrollY + 80; // offset for header
+                let activeIdx = 0;
+                for (let i = 0; i < sections.length; i++) {
+                    if (sections[i] && sections[i].offsetTop <= scrollPos) {
+                        activeIdx = i;
+                    }
+                }
+                navLinks.forEach((link, idx) => {
+                    if (idx === activeIdx) link.classList.add('active');
+                    else link.classList.remove('active');
+                });
+            }
+            window.addEventListener('scroll', onScroll, { passive: true });
+            window.addEventListener('resize', onScroll);
+            document.addEventListener('DOMContentLoaded', onScroll);
+        })();
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Handle image errors
+            function handleImageError(img) {
+                img.style.background = '#fff';
+                img.style.border = '1.5px solid rgba(0,0,0,0.08)';
+                img.src = '';
+            }
+            
+            // Add error handlers to all images
+            document.querySelectorAll('img').forEach(function(img) {
+                img.addEventListener('error', function() {
+                    handleImageError(this);
+                });
+            });
+            
+            document.querySelectorAll('a').forEach(function(link) {
+                // Skip nav bar links and logo
+                if (link.closest('nav') || link.classList.contains('logo')) return;
+                
+                var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+                svg.setAttribute("width", "24");
+                svg.setAttribute("height", "24"); 
+                svg.setAttribute("viewBox", "0 0 24 24");
+                svg.setAttribute("fill", "none");
+                svg.classList.add("external-link-icon");
+                svg.setAttribute("aria-hidden", "true");
+                
+                var path1 = document.createElementNS("http://www.w3.org/2000/svg", "path");
+                path1.setAttribute("d", "M15.6396 7.02527H12.0181V5.02527H19.0181V12.0253H17.0181V8.47528L12.1042 13.3892L10.6899 11.975L15.6396 7.02527Z");
+                path1.setAttribute("fill", "currentColor");
+                
+                var path2 = document.createElementNS("http://www.w3.org/2000/svg", "path");
+                path2.setAttribute("d", "M10.9819 6.97473H4.98193V18.9747H16.9819V12.9747H14.9819V16.9747H6.98193V8.97473H10.9819V6.97473Z");
+                path2.setAttribute("fill", "currentColor");
+                
+                svg.appendChild(path1);
+                svg.appendChild(path2);
+                
+                link.appendChild(document.createTextNode(' '));
+                link.appendChild(svg);
+            });
         });
-    }
-    window.addEventListener('scroll', onScroll, { passive: true });
-    window.addEventListener('resize', onScroll);
-    document.addEventListener('DOMContentLoaded', onScroll);
-})();
-</script>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Handle image errors
-    function handleImageError(img) {
-        img.style.background = '#fff';
-        img.style.border = '1.5px solid rgba(0,0,0,0.08)';
-        img.src = '';
-    }
-    
-    // Add error handlers to all images
-    document.querySelectorAll('img').forEach(function(img) {
-        img.addEventListener('error', function() {
-            handleImageError(this);
+        
+        // Binary Clock Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            function createBinaryDigits(container, maxValue) {
+                container.innerHTML = '';
+                const bits = Math.ceil(Math.log2(maxValue + 1));
+                
+                for (let i = 0; i < bits; i++) {
+                    const digit = document.createElement('div');
+                    digit.className = 'binary-digit inactive';
+                    container.appendChild(digit);
+                }
+            }
+            
+            function updateBinaryClock() {
+                const now = new Date();
+                const utcHours = now.getUTCHours();
+                const utcMinutes = now.getUTCMinutes();
+                const utcSeconds = now.getUTCSeconds();
+                
+                // Update hours (0-23, so we need 5 bits)
+                const hoursContainer = document.getElementById('hours');
+                if (hoursContainer.children.length === 0) {
+                    createBinaryDigits(hoursContainer, 23);
+                }
+                updateBinaryDisplay(hoursContainer, utcHours);
+                
+                // Update minutes (0-59, so we need 6 bits)
+                const minutesContainer = document.getElementById('minutes');
+                if (minutesContainer.children.length === 0) {
+                    createBinaryDigits(minutesContainer, 59);
+                }
+                updateBinaryDisplay(minutesContainer, utcMinutes);
+                
+                // Update seconds (0-59, so we need 6 bits)
+                const secondsContainer = document.getElementById('seconds');
+                if (secondsContainer.children.length === 0) {
+                    createBinaryDigits(secondsContainer, 59);
+                }
+                updateBinaryDisplay(secondsContainer, utcSeconds);
+            }
+            
+            function updateBinaryDisplay(container, value) {
+                const digits = container.children;
+                for (let i = 0; i < digits.length; i++) {
+                    const bit = (value >> i) & 1;
+                    if (bit) {
+                        digits[i].classList.remove('inactive');
+                        digits[i].classList.add('active');
+                    } else {
+                        digits[i].classList.remove('active');
+                        digits[i].classList.add('inactive');
+                    }
+                }
+            }
+            
+            // Initialize and update the clock
+            updateBinaryClock();
+            setInterval(updateBinaryClock, 1000);
         });
-    });
+    </script>
+    </html>
     
-    document.querySelectorAll('a').forEach(function(link) {
-        // Skip nav bar links and logo
-        if (link.closest('nav') || link.classList.contains('logo')) return;
-        
-        var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-        svg.setAttribute("width", "24");
-        svg.setAttribute("height", "24"); 
-        svg.setAttribute("viewBox", "0 0 24 24");
-        svg.setAttribute("fill", "none");
-        svg.classList.add("external-link-icon");
-        svg.setAttribute("aria-hidden", "true");
-
-        var path1 = document.createElementNS("http://www.w3.org/2000/svg", "path");
-        path1.setAttribute("d", "M15.6396 7.02527H12.0181V5.02527H19.0181V12.0253H17.0181V8.47528L12.1042 13.3892L10.6899 11.975L15.6396 7.02527Z");
-        path1.setAttribute("fill", "currentColor");
-
-        var path2 = document.createElementNS("http://www.w3.org/2000/svg", "path");
-        path2.setAttribute("d", "M10.9819 6.97473H4.98193V18.9747H16.9819V12.9747H14.9819V16.9747H6.98193V8.97473H10.9819V6.97473Z");
-        path2.setAttribute("fill", "currentColor");
-
-        svg.appendChild(path1);
-        svg.appendChild(path2);
-        
-        link.appendChild(document.createTextNode(' '));
-        link.appendChild(svg);
-    });
-});
-</script>
-</html>
