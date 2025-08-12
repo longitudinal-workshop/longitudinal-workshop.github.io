@@ -27,20 +27,19 @@
 <main>
     <section id="home" class="hero">
         <div class="container">
-            <!-- Binary Clock Background -->
-             <div class="binary-clock-container">
-                <div class="binary-clock">
-                    <div class="clock-row">
-                        <div class="clock-label">h</div>
-                        <div class="binary-digits" id="hours"></div>
-                    </div>
-                    <div class="clock-row">
-                        <div class="clock-label">m</div>
-                        <div class="binary-digits" id="minutes"></div>
-                    </div>
-                    <div class="clock-row">
-                        <div class="clock-label">s</div>
-                        <div class="binary-digits" id="seconds"></div>
+            <!-- Analog Clock Background -->
+            <div class="analog-clock-container">
+                <div class="analog-clock">
+                    <div class="clock-face">
+                        <div class="clock-center"></div>
+                        <div class="hour-hand" id="hour-hand"></div>
+                        <div class="minute-hand" id="minute-hand"></div>
+                        <!-- <div class="second-hand" id="second-hand"></div> -->
+                        <!-- Clock numbers -->
+                        <div class="clock-number clock-12">12</div>
+                        <div class="clock-number clock-3">3</div>
+                        <div class="clock-number clock-6">6</div>
+                        <div class="clock-number clock-9">9</div>
                     </div>
                 </div>
             </div>
@@ -99,7 +98,30 @@
     <section id="cfp">
         <div class="container">
             <h2>2/ Call for Participants</h2>
-            <p>To ensure ....</p>
+            <p class="text-secondary">Join us for a hands-on workshop on conducting longitudinal AI studies. Learn practical skills, gain industry insights, and build community with researchers working on long-term AI evaluation.</p>
+            
+            <h3>Who Should Attend</h3>
+            <p class="text-secondary">HCI researchers, AI practitioners, industry professionals, graduate students, and designers working with AI systems that need long-term evaluation.</p>
+            
+            <h3>What You'll Gain</h3>
+            <p class="text-secondary">Practical skills for longitudinal studies, industry insights from Google DeepMind/Apple/Adobe experts, hands-on experience designing protocols and AI tools, and community building.</p>
+            
+            <h3>Important Details</h3>
+            <ul class="cfp-list">
+                <li><strong>Workshop:</strong> Sunday, September 28, 2025 @ UIST '25, Busan, Korea</li>
+                <li><strong>Format:</strong> Keynotes, industry panel, hands-on activities</li>
+                <li><strong>Location:</strong> In-person workshop</li>
+            </ul>
+            
+            <h3>Registration</h3>
+            <p class="text-secondary">Unlike typical SIGCHI workshops, UIST 2025 workshops are open enrollment with limited spaces offered first-come, first-served. No position paper submission required.</p>
+            
+            <div class="cfp-cta">
+                <a href="https://uist.acm.org/2025/attending/#registration" class="cta-button cta-button-inline" target="_blank" rel="noopener noreferrer">
+                    Register for UIST 2025
+                </a>
+                <p class="cfp-note">Register early to ensure a workshop space. Questions? <a href="mailto:long@columbia.edu,chilton@columbia.edu">{long, chilton}@columbia.edu</a></p>
+            </div>
         </div>
     </section>
     
@@ -123,17 +145,17 @@
                     <tr>
                         <td>9:00–9:30</td>
                         <td><span class="activity-title">Opening Presentation</span></td>
-                        <td>Organizers will welcome participants and introduce key concepts, practices, and examples of longitudinal HCI research.</td>
+                        <td>Overview of longitudinal HCI research fundamentals.</td>
                     </tr>
                     <tr>
                         <td>9:30–10:30</td>
                         <td><span class="activity-title">Participant Introductions</span></td>
-                        <td>Each participant will give a short self-introduction, referencing their submitted work and research interests to build a shared understanding of backgrounds and goals.</td>
+                        <td>Brief self-introductions and research interests.</td>
                     </tr>
                     <tr>
                         <td>10:30–11:00</td>
                         <td><span class="activity-title">Keynote Talk & Q&A</span></td>
-                        <td>A presentation by our tentative keynote speaker, <strong>Tesh Goyal</strong> (Google DeepMind), a leading expert in industry-based longitudinal research and responsible AI.[6, 7] He will discuss tools and products developed for long-term user evaluation.</td>
+                        <td><strong>Tesh Goyal</strong> (Google DeepMind) presents on tools for long-term user evaluation.</td>
                     </tr>
                     <tr class="phase-header">
                         <td colspan="3"><strong>Phase 2 (11:00–12:00, 13:15–14:00) — Navigating the Challenges of Longitudinal Studies</strong></td>
@@ -141,12 +163,12 @@
                     <tr>
                         <td>11:00–12:00</td>
                         <td><span class="activity-title">Table Activity #1: Identifying Challenges</span></td>
-                        <td>In interest-based groups, participants will share their work and collaboratively identify key challenges in conducting longitudinal studies, using a guided framework.</td>
+                        <td>Group discussion on key challenges in longitudinal research.</td>
                     </tr>
                     <tr>
                         <td>13:15–14:00</td>
                         <td><span class="activity-title">Industry Panel</span></td>
-                        <td>Following an optional group lunch, a panel of product managers and user research experts will discuss how their work relates to longitudinal themes like tracking user behavior, iterative development, and product adoption, bridging academic and industry practices.</td>
+                        <td>Industry experts discuss longitudinal user research practices.</td>
                     </tr>
                     <tr class="phase-header">
                         <td colspan="3"><strong>Phase 3 (14:00–16:00) — Gaining Hands-on Experience</strong></td>
@@ -154,12 +176,12 @@
                     <tr>
                         <td>14:00–15:00</td>
                         <td><span class="activity-title">Table Activity #2: Study Protocol Design</span></td>
-                        <td>Participants will work in pairs to design a new longitudinal study protocol, including research questions, methodologies, recruitment, and pilot testing, based on specific scenario constraints.</td>
+                        <td>Paired work on designing longitudinal study protocols.</td>
                     </tr>
                     <tr>
                         <td>15:00–16:00</td>
                         <td><span class="activity-title">Table Activity #3: System Prototyping</span></td>
-                        <td>Participants will prototype an AI tool to support their proposed study, sketching wireframes and designing system logging structures for longitudinal data collection.</td>
+                        <td>Design AI tools for longitudinal data collection.</td>
                     </tr>
                     <tr class="phase-header">
                         <td colspan="3"><strong>Phase 4 (16:00–17:00) — Reflection, Summary, and Future</span></td>
@@ -167,12 +189,12 @@
                         <tr>
                             <td>16:00–16:40</td>
                             <td><span class="activity-title">Table Activity #4: Reflection</span></td>
-                            <td>Participants will document their designs and insights, tracing the evolution of their ideas. Organizers will initiate the development of a shared framework or toolkit repository to foster future collaboration.</td>
+                            <td>Document insights and establish collaboration framework.</td>
                         </tr>
                         <tr>
                             <td>16:40–17:00</td>
                             <td><span class="activity-title">Closing Remarks</span></td>
-                            <td>The session will conclude with a short keynote by <strong>Lydia Chilton</strong> (Columbia University) [8, 9], a group photo, and post-workshop planning to establish a lasting community via a Discord server or mailing list.</td>
+                            <td>Keynote by <strong>Lydia Chilton</strong>, group photo, and community planning.</td>
                         </tr>
                     </tbody>
                 </table>
@@ -186,23 +208,23 @@
                 <p>If you have any questions, don't hesitate to reach out to <a href="mailto:long@columbia.edu,chilton@columbia.edu">{long, chilton}@columbia.edu</a>.
                 </p>
                 <ul class="organizer-list">
-                    <li><img src="Tao.jpg" alt="Tao"><a href="https://iamtaolong.github.io/" target="_blank" rel="noopener noreferrer">Tao Long</a><span class="affiliation">Columbia University</span></li>
-                    <li><img src="Sitong.jpg" alt="Sitong"><a href="https://sitong-wang.github.io/" target="_blank" rel="noopener noreferrer">Sitong Wang</a><span class="affiliation">Columbia University</span></li>
-                    <li><img src="Émilie.jpg" alt="Émilie"><a href="https://emiliefab.re/" target="_blank" rel="noopener noreferrer">Émilie Fabre</a><span class="affiliation">University of Tokyo</span></li>
-                    <li><img src="Tony.jpg" alt="Tony"><a href="https://www.tonyywang.com/" target="_blank" rel="noopener noreferrer">Tony Wang</a><span class="affiliation">Cornell University</span></li>
-                    <li><img src="Anup.jpg" alt="Anup"><a href="https://anupsathya.com/" target="_blank" rel="noopener noreferrer">Anup Sathya</a><span class="affiliation">University of Chicago</span></li>
-                    <li><img src="Jason.jpg" alt="Jason"><a href="https://jasonwunix.com/" target="_blank" rel="noopener noreferrer">Jason Wu</a><span class="affiliation">Apple</span></li>
-                    <li><img src="Savvas.jpg" alt="Savvas"><a href="https://savvaspetridis.github.io/" target="_blank" rel="noopener noreferrer">Savvas Petridis</a><span class="affiliation">Google DeepMind</span></li>
-                    <li><img src="Dingzeyu.jpg" alt="Dingzeyu"><a href="https://dingzeyu.li/" target="_blank" rel="noopener noreferrer">Dingzeyu Li</a><span class="affiliation">Adobe Research</span></li>
-                    <li><img src="Tuhin.jpg" alt="Tuhin"><a href="https://tuhinjubcse.github.io/" target="_blank" rel="noopener noreferrer">Tuhin Chakrabarty</a><span class="affiliation">Salesforce AI Research</span></li>
-                    <li><img src="Yue.jpg" alt="Yue"><a href="https://www.aalto.fi/en/people/yue-jiang" target="_blank" rel="noopener noreferrer">Yue Jiang</a><span class="affiliation">Aalto University & University of Utah</span></li>
-                    <li><img src="Jingyi.jpg" alt="Jingyi"><a href="https://jingyi.me/" target="_blank" rel="noopener noreferrer">Jingyi Li</a><span class="affiliation">Pomona College</span></li>
-                    <li><img src="Tiffany.jpg" alt="Tiffany"><a href="https://tifftseng.com/" target="_blank" rel="noopener noreferrer">Tiffany Tseng</a><span class="affiliation">Barnard College</span></li>
-                    <li><img src="Ken.jpg" alt="Ken"><a href="https://www.media.mit.edu/people/ken_n/overview/" target="_blank" rel="noopener noreferrer">Ken Nakagaki</a><span class="affiliation">University of Chicago</span></li>
-                    <li><img src="Qian.jpg" alt="Qian"><a href="https://qianyang.co/" target="_blank" rel="noopener noreferrer">Qian Yang</a><span class="affiliation">Cornell University</span></li>
-                    <li><img src="Nikolas.jpg" alt="Nikolas"><a href="http://nikmartelaro.com/" target="_blank" rel="noopener noreferrer">Nikolas Martelaro</a><span class="affiliation">Carnegie Mellon University</span></li>
-                    <li><img src="Jeffrey.jpg" alt="Jeffrey"><a href="https://www.stevens.edu/profile/jnickers" target="_blank" rel="noopener noreferrer">Jeffrey Nickerson</a><span class="affiliation">Stevens Institute of Technology</span></li>
-                    <li><img src="Lydia.jpg" alt="Lydia"><a href="https://www.cs.columbia.edu/~chilton/" target="_blank" rel="noopener noreferrer">Lydia Chilton</a><span class="affiliation">Columbia University</span></li>
+                    <li><a href="https://iamtaolong.github.io/" target="_blank" rel="noopener noreferrer">Tao Long</a><span class="affiliation">Columbia University</span></li>
+                    <li><a href="https://sitong-wang.github.io/" target="_blank" rel="noopener noreferrer">Sitong Wang</a><span class="affiliation">Columbia University</span></li>
+                    <li><a href="https://emiliefab.re/" target="_blank" rel="noopener noreferrer">Émilie Fabre</a><span class="affiliation">University of Tokyo</span></li>
+                    <li><a href="https://www.tonyywang.com/" target="_blank" rel="noopener noreferrer">Tony Wang</a><span class="affiliation">Cornell University</span></li>
+                    <li><a href="https://anupsathya.com/" target="_blank" rel="noopener noreferrer">Anup Sathya</a><span class="affiliation">University of Chicago</span></li>
+                    <li><a href="https://jasonwunix.com/" target="_blank" rel="noopener noreferrer">Jason Wu</a><span class="affiliation">Apple</span></li>
+                    <li><a href="https://savvaspetridis.github.io/" target="_blank" rel="noopener noreferrer">Savvas Petridis</a><span class="affiliation">Google DeepMind</span></li>
+                    <li><a href="https://dingzeyu.li/" target="_blank" rel="noopener noreferrer">Dingzeyu Li</a><span class="affiliation">Adobe Research</span></li>
+                    <li><a href="https://tuhinjubcse.github.io/" target="_blank" rel="noopener noreferrer">Tuhin Chakrabarty</a><span class="affiliation">Salesforce AI Research</span></li>
+                    <li><a href="https://www.aalto.fi/en/people/yue-jiang" target="_blank" rel="noopener noreferrer">Yue Jiang</a><span class="affiliation">Aalto University & University of Utah</span></li>
+                    <li><a href="https://jingyi.me/" target="_blank" rel="noopener noreferrer">Jingyi Li</a><span class="affiliation">Pomona College</span></li>
+                    <li><a href="https://tifftseng.com/" target="_blank" rel="noopener noreferrer">Tiffany Tseng</a><span class="affiliation">Barnard College</span></li>
+                    <li><a href="https://www.media.mit.edu/people/ken_n/overview/" target="_blank" rel="noopener noreferrer">Ken Nakagaki</a><span class="affiliation">University of Chicago</span></li>
+                    <li><a href="https://qianyang.co/" target="_blank" rel="noopener noreferrer">Qian Yang</a><span class="affiliation">Cornell University</span></li>
+                    <li><a href="http://nikmartelaro.com/" target="_blank" rel="noopener noreferrer">Nikolas Martelaro</a><span class="affiliation">Carnegie Mellon University</span></li>
+                    <li><a href="https://www.stevens.edu/profile/jnickers" target="_blank" rel="noopener noreferrer">Jeffrey Nickerson</a><span class="affiliation">Stevens Institute of Technology</span></li>
+                    <li><a href="https://www.cs.columbia.edu/~chilton/" target="_blank" rel="noopener noreferrer">Lydia Chilton</a><span class="affiliation">Columbia University</span></li>
                 </ul>
             </div>
         </section>
@@ -273,64 +295,29 @@
             });
         });
         
-        // Binary Clock Functionality
+        // Fast Rotating Clock for Longitudinal Studies
         document.addEventListener('DOMContentLoaded', function() {
-            function createBinaryDigits(container, maxValue) {
-                container.innerHTML = '';
-                const bits = Math.ceil(Math.log2(maxValue + 1));
+            function rotateClock() {
+                const now = Date.now();
                 
-                for (let i = 0; i < bits; i++) {
-                    const digit = document.createElement('div');
-                    digit.className = 'binary-digit inactive';
-                    container.appendChild(digit);
-                }
+                // Simple rotation speeds for smooth movement
+                const hourRotation = (now * 0.05) % 360;      // Slow rotation
+                const minuteRotation = (now * 0.5) % 360;     // Medium rotation  
+                // const secondRotation = (now * 1) % 360;       // Fast rotation
+                
+                // Update hand rotations
+                const hourHand = document.getElementById('hour-hand');
+                const minuteHand = document.getElementById('minute-hand');
+                // const secondHand = document.getElementById('second-hand');
+                
+                if (hourHand) hourHand.style.transform = `translateX(-50%) rotate(${hourRotation}deg)`;
+                if (minuteHand) minuteHand.style.transform = `translateX(-50%) rotate(${minuteRotation}deg)`;
+                // if (secondHand) secondHand.style.transform = `translateX(-50%) rotate(${secondRotation}deg)`;
             }
             
-            function updateBinaryClock() {
-                const now = new Date();
-                const utcHours = now.getUTCHours();
-                const utcMinutes = now.getUTCMinutes();
-                const utcSeconds = now.getUTCSeconds();
-                
-                // Update hours (0-23, so we need 5 bits)
-                const hoursContainer = document.getElementById('hours');
-                if (hoursContainer.children.length === 0) {
-                    createBinaryDigits(hoursContainer, 23);
-                }
-                updateBinaryDisplay(hoursContainer, utcHours);
-                
-                // Update minutes (0-59, so we need 6 bits)
-                const minutesContainer = document.getElementById('minutes');
-                if (minutesContainer.children.length === 0) {
-                    createBinaryDigits(minutesContainer, 59);
-                }
-                updateBinaryDisplay(minutesContainer, utcMinutes);
-                
-                // Update seconds (0-59, so we need 6 bits)
-                const secondsContainer = document.getElementById('seconds');
-                if (secondsContainer.children.length === 0) {
-                    createBinaryDigits(secondsContainer, 59);
-                }
-                updateBinaryDisplay(secondsContainer, utcSeconds);
-            }
-            
-            function updateBinaryDisplay(container, value) {
-                const digits = container.children;
-                for (let i = 0; i < digits.length; i++) {
-                    const bit = (value >> i) & 1;
-                    if (bit) {
-                        digits[i].classList.remove('inactive');
-                        digits[i].classList.add('active');
-                    } else {
-                        digits[i].classList.remove('active');
-                        digits[i].classList.add('inactive');
-                    }
-                }
-            }
-            
-            // Initialize and update the clock
-            updateBinaryClock();
-            setInterval(updateBinaryClock, 1000);
+            // Initialize and start smooth rotation
+            rotateClock();
+            setInterval(rotateClock, 16); // 60fps for smooth movement
         });
     </script>
     </html>

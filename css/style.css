@@ -209,8 +209,8 @@ nav a:hover {
     overflow: hidden;
 }
 
-/* Binary Clock Background */
-.binary-clock-container {
+/* Analog Clock Background */
+.analog-clock-container {
     width: 100%;
     height: 100%;
     display: flex;
@@ -221,46 +221,97 @@ nav a:hover {
     margin-top: -5rem;
 }
 
-.binary-clock {
+.analog-clock {
     display: flex;
-    flex-direction: column;
-    gap: 10px;
-    transform: scale(2);
-}
-
-.clock-row {
-    display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 15px;
+    transform: scale(1.2);
 }
 
-.clock-label {
-    font-family: 'Courier New', monospace;
-    font-size: 12px;
-    font-weight: bold;
+.clock-face {
+    width: 200px;
+    height: 200px;
+    border: 8px solid var(--text-color);
+    border-radius: 50%;
+    position: relative;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+.clock-center {
+    width: 16px;
+    height: 16px;
+    background: var(--text-color);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+.hour-hand, .minute-hand, .second-hand {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform-origin: bottom center;
+    border-radius: 4px;
+}
+
+.hour-hand {
+    width: 6px;
+    height: 60px;
+    background: var(--text-color);
+    transform: translateX(-50%) rotate(0deg);
+    z-index: 8;
+}
+
+.minute-hand {
+    width: 4px;
+    height: 80px;
+    background: var(--text-color);
+    transform: translateX(-50%) rotate(0deg);
+    z-index: 9;
+}
+
+.second-hand {
+    width: 2px;
+    height: 90px;
+    background: #74FBD3;
+    transform: translateX(-50%) rotate(0deg);
+    z-index: 10;
+}
+
+.clock-number {
+    position: absolute;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
     color: var(--text-color);
-    width: 20px;
-    text-align: center;
 }
 
-.binary-digits {
-    display: flex;
-    gap: 8px;
+.clock-12 {
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-.binary-digit {
-    width: 15px;
-    height: 15px;
-    border: 1px solid var(--text-color);
-    transition: background-color 0.3s ease;
+.clock-3 {
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
-.binary-digit.active {
-    background-color: #74FBD3;
+.clock-6 {
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-.binary-digit.inactive {
-    background-color: transparent;
+.clock-9 {
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .hero h1 {
@@ -389,6 +440,44 @@ nav a:hover {
     font-style: italic;
     font-weight: 500;
     text-decoration: underline;
+}
+
+/* Call for Participants */
+.cfp-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.cfp-list li {
+    margin-bottom: 12px;
+    padding-left: 25px;
+    position: relative;
+    color: var(--light-text-color);
+}
+
+.cfp-list li:before {
+    content: "•";
+    color: var(--primary-color);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.cfp-cta {
+    text-align: center;
+    margin-top: 40px;
+    padding: 30px;
+    background: var(--secondary-color);
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+}
+
+.cfp-note {
+    margin-top: 20px;
+    font-size: 0.95rem;
+    color: var(--light-text-color);
 }
 
 /* Organizer List */
