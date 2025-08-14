@@ -18,7 +18,7 @@
     --header-height: 106px;
     --text-color: #222;
     --light-text-color: #666;
-    --primary-color: #007acc;
+    --primary-color: #04b778;
     --secondary-color: #f8f9fa;
     --border-color: #e9ecef;
 }
@@ -47,7 +47,7 @@ body {
     color: var(--text-color);
     background-color: #FFFFFF;
     padding-top: 106px;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 /* Typography */
@@ -107,7 +107,7 @@ section {
 }
 
 section:nth-child(odd) {
-    background-color: var(--secondary-color);
+    background-color: rgba(248, 249, 250, 0.86);
 }
 
 /* Header */
@@ -201,7 +201,7 @@ nav a:hover {
 
 /* Hero Section */
 .hero {
-    padding-top: calc(var(--header-height) + 60px);
+    padding-top: calc(var(--header-height));
     padding-bottom: 60px;
     text-align: center;
     background-color: #FFFFFF;
@@ -209,38 +209,101 @@ nav a:hover {
     overflow: hidden;
 }
 
+/* Hero Visual Container - Side by Side Layout */
+.hero-visual-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin-bottom: 3rem;
+    /* margin-top: -3rem; */
+    flex-wrap: wrap;
+}
+
 /* Analog Clock Background */
 .analog-clock-container {
-    width: 100%;
-    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     pointer-events: none;
-    margin-bottom: 5rem;
-    margin-top: -5rem;
+    z-index: -1;
+    opacity: 0.03;
+}
+
+/* Workshop Screenshot Styles */
+.workshop-screenshot-container {
+    flex: 0 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 240px; /* Match the scaled clock height (200px * 1.2) */
+}
+
+.workshop-screenshot-link {
+    display: block;
+    transition: transform 0.3s ease;
+    text-decoration: none;
+}
+
+.workshop-screenshot-link:hover {
+    transform: scale(1.05);
+    text-decoration: none;
+}
+
+.workshop-screenshot {
+    max-width: 320px;
+    max-height: 250px; /* Slightly less than container height for padding */
+    height: auto;
+    width: auto;
+    opacity: 0.8;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    transition: opacity 0.3s ease, box-shadow 0.3s ease;
+    object-fit: contain; /* Ensure the image scales properly */
+}
+
+.workshop-screenshot:hover {
+    opacity: 1;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-visual-container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .workshop-screenshot {
+        max-width: 250px;
+    }
 }
 
 .analog-clock {
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: scale(1.2);
+    transform: scale(2.5);
 }
 
 .clock-face {
-    width: 200px;
-    height: 200px;
-    border: 8px solid var(--text-color);
+    width: 400px;
+    height: 400px;
+    border: 12px solid var(--text-color);
     border-radius: 50%;
     position: relative;
-    background: rgba(255, 255, 255, 0.95);
-    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: none;
 }
 
 .clock-center {
-    width: 16px;
-    height: 16px;
+    width: 24px;
+    height: 24px;
     background: var(--text-color);
     border-radius: 50%;
     position: absolute;
@@ -259,24 +322,24 @@ nav a:hover {
 }
 
 .hour-hand {
-    width: 6px;
-    height: 60px;
+    width: 12px;
+    height: 120px;
     background: var(--text-color);
     transform: translateX(-50%) rotate(0deg);
     z-index: 8;
 }
 
 .minute-hand {
-    width: 4px;
-    height: 80px;
+    width: 8px;
+    height: 160px;
     background: var(--text-color);
     transform: translateX(-50%) rotate(0deg);
     z-index: 9;
 }
 
 .second-hand {
-    width: 2px;
-    height: 90px;
+    width: 4px;
+    height: 180px;
     background: #74FBD3;
     transform: translateX(-50%) rotate(0deg);
     z-index: 10;
@@ -285,31 +348,31 @@ nav a:hover {
 .clock-number {
     position: absolute;
     font-family: 'DM Sans', sans-serif;
-    font-size: 18px;
+    font-size: 36px;
     font-weight: 600;
     color: var(--text-color);
 }
 
 .clock-12 {
-    top: 15px;
+    top: 30px;
     left: 50%;
     transform: translateX(-50%);
 }
 
 .clock-3 {
-    right: 15px;
+    right: 30px;
     top: 50%;
     transform: translateY(-50%);
 }
 
 .clock-6 {
-    bottom: 15px;
+    bottom: 30px;
     left: 50%;
     transform: translateX(-50%);
 }
 
 .clock-9 {
-    left: 15px;
+    left: 30px;
     top: 50%;
     transform: translateY(-50%);
 }
@@ -323,7 +386,7 @@ nav a:hover {
 .hero-subtitle {
     font-size: 1.3rem;
     color: var(--light-text-color);
-    margin-top: 10px;
+    /* margin-top: 10px; */
     margin-bottom: 30px;
 }
 
@@ -432,14 +495,14 @@ nav a:hover {
 }
 
 .phase-header {
-    background-color: #e3e3e3;
+    background-color: #cffff073;
     font-weight: 700;
 }
 
 .activity-title {
-    font-style: italic;
-    font-weight: 500;
-    text-decoration: underline;
+    /* font-style: italic; */
+    font-weight: 600;
+    /* text-decoration: underline; */
 }
 
 /* Call for Participants */
@@ -480,40 +543,123 @@ nav a:hover {
     color: var(--light-text-color);
 }
 
-/* Organizer List */
-.organizer-list {
-    list-style: none;
-    padding: 0;
+/* Organizer Grid */
+.organizer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
     margin-top: 30px;
-    column-count: 2;
-    column-gap: 40px;
+    padding: 0;
 }
 
-.organizer-list li {
-    margin-bottom: 12px;
-    font-size: 1rem;
-    display: flex;
-    align-items: center;
-    gap: 0.7rem;
+.organizer-card {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    cursor: pointer;
 }
 
-.organizer-list img {
-    width: 2rem;
-    height: 2rem;
+.organizer-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    background: rgba(255, 255, 255, 0.95);
+    text-decoration: none;
+}
+
+.organizer-card:active {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.organizer-profile-image {
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
     object-fit: cover;
-    margin-right: 0.5rem;
-    background: #fff;
-    border: 1.5px solid rgba(0,0,0,0.08);
-    flex-shrink: 0;
+    margin: 0 auto 1rem;
+    display: block;
+    background: #f8f9fa;
+    border: 3px solid rgba(0, 0, 0, 0.05);
     box-sizing: border-box;
+    transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
-.affiliation {
-    color: #888;
-    margin-left: 0.3rem;
-    font-size: 0.98em;
-    font-weight: 400;
+.organizer-card:hover .organizer-profile-image {
+    transform: scale(1.05);
+    border-color: var(--primary-color);
+}
+
+.organizer-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.organizer-name {
+    transition: color 0.2s ease;
+}
+
+.organizer-card:hover .organizer-name {
+    color: var(--primary-color);
+}
+
+.organizer-affiliations {
+    margin-top: 0.5rem;
+}
+
+.organizer-affiliation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--light-text-color);
+    margin-bottom: 0.3rem;
+}
+
+.organizer-affiliation:last-child {
+    margin-bottom: 0;
+}
+
+.affiliation-logo {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    filter: grayscale(100%) opacity(0.6);
+    transition: filter 0.3s ease, transform 0.2s ease;
+}
+
+.organizer-card:hover .affiliation-logo {
+    filter: grayscale(0%) opacity(1);
+    transform: scale(1.1);
+}
+
+/* Responsive adjustments for organizer grid */
+@media (max-width: 768px) {
+    .organizer-grid {
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 1.5rem;
+    }
+    
+    .organizer-profile-image {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    .organizer-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
 }
 
 /* Footer */

@@ -2,8 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>UIST'25 Workshop on Longitudinal AI Workshop </title>
+    <title>Longitudinal.AI@UIST'25 Workshop </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="alternate icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📅</text></svg>">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <header>
@@ -25,40 +27,52 @@
     </div>
 </header>
 <main>
-    <section id="home" class="hero">
+    <section id="home" class="hero" style="background-color: white;">
         <div class="container">
-            <!-- Analog Clock Background -->
-            <div class="analog-clock-container">
-                <div class="analog-clock">
-                    <div class="clock-face">
-                        <div class="clock-center"></div>
-                        <div class="hour-hand" id="hour-hand"></div>
-                        <div class="minute-hand" id="minute-hand"></div>
-                        <!-- <div class="second-hand" id="second-hand"></div> -->
-                        <!-- Clock numbers -->
-                        <div class="clock-number clock-12">12</div>
-                        <div class="clock-number clock-3">3</div>
-                        <div class="clock-number clock-6">6</div>
-                        <div class="clock-number clock-9">9</div>
+           
+            <p class="hero-subtitle"><a href="https://uist.acm.org/2025/workshops/" target="_blank" rel="noopener noreferrer" style="color:rgb(103, 103, 103)">UIST '25</a>  Workshop (WS02)  &nbsp;&nbsp;&nbsp;📍&nbsp;&nbsp;&nbsp;  <span style="color:rgb(103, 103, 103)">Busan, Korea</span> </p>
+            <h1>Facilitating <span class="highlight highlight-bold"> Longitudinal Interaction </span> Studies of AI Systems</h1>
+            <p class="hero-subtitle">Sunday, September 28, 2025</p>   
+
+            <br>
+             <!-- Clock and Screenshot Container -->
+             <div class="hero-visual-container">
+                <!-- Analog Clock Background -->
+                <div class="analog-clock-container">
+                    <div class="analog-clock">
+                        <div class="clock-face">
+                            <div class="clock-center"></div>
+                            <div class="hour-hand" id="hour-hand"></div>
+                            <div class="minute-hand" id="minute-hand"></div>
+                            <!-- <div class="second-hand" id="second-hand"></div> -->
+                            <!-- Clock numbers -->
+                            <div class="clock-number clock-12">Longitudinal</div>
+                            <div class="clock-number clock-3">AI✨</div>
+                            <div class="clock-number clock-6">Systems</div>
+                            <div class="clock-number clock-9">UIST</div>
+                        </div>
                     </div>
                 </div>
+                
+                <!-- Workshop Screenshot -->
+                <div class="workshop-screenshot-container">
+                    <a href="files/2025_Longitudinal_Workshop.pdf" target="_blank" rel="noopener noreferrer" class="workshop-screenshot-link">
+                        <img src="files/workshop_screenshot.png" alt="Workshop Screenshot" class="workshop-screenshot"><br>&nbsp;&nbsp;&nbsp;&nbsp; <span style="font-size: 14px; color:rgb(92, 92, 92)!important">full proposal</span>
+                    </a>
+                </div>
             </div>
-            <p class="hero-subtitle">UIST '25  Workshop @ Busan, Korea</p>
-            <h1>Facilitating <span class="highlight highlight-bold"> Longitudinal Interaction </span> Studies of AI Systems</h1>
-            <p class="hero-subtitle">Sunday, September 28, 2025</p>     
-            <a href="" class="cta-button cta-button-inline" target="_blank" rel="noopener noreferrer">
+            <br>
+            
+            <a href="https://uist.acm.org/2025/attending/#registration" class="cta-button cta-button-inline" target="_blank" rel="noopener noreferrer">
                 <!-- <span class="rotating-dots">
                     <span class="cta-dot dot1"></span>
                     <span class="cta-dot dot2"></span>
                 </span> -->
-                <span>in-person workshop registration (first come, first serve!)</span>
+                <span>Register for UIST 2025 + Longitudinal AI Workshop</span>
             </a>
-            <!-- <p style="color:grey">questions? <a href="mailto:long@columbia.edu,chilton@columbia.edu">{long, chilton}@columbia.edu</a>.
-            </p> -->
-            <!-- <blockquote class="hero-tagline">
-                Every UIST system can be a test of time system.
-            </blockquote> -->
-            <!-- <p>This aspirational statement serves as the guiding vision for our workshop. The UIST community excels at creating robust, proof-of-concept prototypes that push the boundaries of interaction.[1] This workshop aims to build upon that strength, providing the tools and mindset to extend these innovations from the lab into the real world for sustained, long-term evaluation.</p> -->
+            <p class="cfp-note">* no position paper needed * register early to ensure a workshop space! &nbsp;&nbsp; <a href="#organizers" style="color:rgb(65, 65, 65)">
+                * Questions? Email us!
+              </a></p>
         </div>
     </section>
     
@@ -67,8 +81,6 @@
             <h2>1/ About: <span class="text-secondary">Why this Workshop?</span></h2>
             
             
-            <!-- <h3> Oppotunties from AI adavcnement: easier to (re-)deploy AI systems + user knowledge literacy to ai systems =>>  people's einteraction with systems over tiem changes..</h3> 
-            <p>Still remmeber your first time using GPT or Dall-E to do task? Im suretrhogout th eway you learned sth. </p> -->
             <p class="text-secondary">Researchers in the UIST community develop novel tools and systems to address complex user challenges. Recent AI advances further lower the cost and barriers to turning ideas into functional AI prototypes and (re-)deploying them quickly.</p>
             
             <p class="text-secondary">However, <span class="highlight highlight-bold">the true value and impact of these AI systems often cannot be captured in a single moment</span>. User interactions with AI are not static; they evolve through continuous learning, adaptation, and even repurposing of the technology over days, weeks, or months. Consequently, traditional one-time evaluations are insufficient for understanding these rich, long-term dynamics. Capturing this evolution requires longitudinal research, yet such studies have historically been difficult to implement due to significant challenges in deployment, evaluation design, and data collection.</p>
@@ -101,26 +113,28 @@
             <p class="text-secondary">Join us for a hands-on workshop on conducting longitudinal AI studies. Learn practical skills, gain industry insights, and build community with researchers working on long-term AI evaluation.</p>
             
             <h3>Who Should Attend</h3>
-            <p class="text-secondary">HCI researchers, AI practitioners, industry professionals, graduate students, and designers working with AI systems that need long-term evaluation.</p>
-            
+            <p class="text-secondary">
+            <span class="highlight highlight-bold">&nbsp;&nbsp; HCI/UIST researchers who care about their system’s performance, usability, and UX <b>beyond that 1-hour study :)</b></span> <br>+ AI practitioners, designers, industry product managers, and UX professionals. <br>
+            </p>
+
             <h3>What You'll Gain</h3>
-            <p class="text-secondary">Practical skills for longitudinal studies, industry insights from Google DeepMind/Apple/Adobe experts, hands-on experience designing protocols and AI tools, and community building.</p>
-            
-            <h3>Important Details</h3>
-            <ul class="cfp-list">
-                <li><strong>Workshop:</strong> Sunday, September 28, 2025 @ UIST '25, Busan, Korea</li>
-                <li><strong>Format:</strong> Keynotes, industry panel, hands-on activities</li>
-                <li><strong>Location:</strong> In-person workshop</li>
+            <ul style="margin-left: 20px; padding: 0; list-style-position: outside;">
+            <li style="margin-bottom: 7px;"><span class="highlight highlight-bold">&nbsp;&nbsp; Crash course on longitudinal HCI/UIST studies</span> — how to run them, navigate challenges and unique opportunities.</li>
+            <li style="margin-bottom: 7px;"><span class="highlight highlight-bold">&nbsp;&nbsp; Industry and academic insights</span> — from experts with real-world experience in long-term system evaluation.</li>
+            <li style="margin-bottom: 7px;"><span class="highlight highlight-bold">&nbsp;&nbsp; Hands-on activities and guidance</span> — plan and design longitudinal studies around your own system right away.</li>
+            <li style="margin-bottom: 7px;"><span class="highlight highlight-bold">&nbsp;&nbsp; Case studies, templates, and toolkits</span> — to help build a longitudinal version of your system and effective study protocols.</li>
+            <li style="margin-bottom: 7px;"><span class="highlight highlight-bold">&nbsp;&nbsp; A lasting community of system researchers</span> — dedicated to advancing methods and evaluation for interactive systems.</li>
             </ul>
-            
             <h3>Registration</h3>
-            <p class="text-secondary">Unlike typical SIGCHI workshops, UIST 2025 workshops are open enrollment with limited spaces offered first-come, first-served. No position paper submission required.</p>
+            <p class="text-secondary">UIST 2025 workshops are open enrollment with limited spaces offered first-come, first-served. No position paper submission required.</p>
             
-            <div class="cfp-cta">
-                <a href="https://uist.acm.org/2025/attending/#registration" class="cta-button cta-button-inline" target="_blank" rel="noopener noreferrer">
-                    Register for UIST 2025
-                </a>
-                <p class="cfp-note">Register early to ensure a workshop space. Questions? <a href="mailto:long@columbia.edu,chilton@columbia.edu">{long, chilton}@columbia.edu</a></p>
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <br>
+            <a href="https://uist.acm.org/2025/attending/#registration" class="cta-button cta-button-inline" target="_blank" rel="noopener noreferrer">
+             
+                <span>Register for UIST 2025 + Longitudinal AI Workshop</span>
+            </a>
+            <p class="cfp-note">* please register early to ensure a workshop space! &nbsp;&nbsp; <a href="mailto:long@columbia.edu,chilton@columbia.edu" style="color:rgb(65, 65, 65)">Questions? Email us!</a></p>
             </div>
         </div>
     </section>
@@ -130,6 +144,7 @@
             <h2>3/ Workshop Schedule</h2>
             <p>Our one-day workshop is structured into four distinct phases, designed to move from foundational knowledge to hands-on application and future planning.</p>
             
+
             <table class="schedule-table">
                 <thead>
                     <tr>
@@ -144,26 +159,31 @@
                     </tr>
                     <tr>
                         <td>9:00–9:30</td>
-                        <td><span class="activity-title">Opening Presentation</span></td>
+                        <td><span class="activity-title">Opening </span></td>
                         <td>Overview of longitudinal HCI research fundamentals.</td>
                     </tr>
                     <tr>
                         <td>9:30–10:30</td>
-                        <td><span class="activity-title">Participant Introductions</span></td>
+                        <td><span class="activity-title"> Introductions</span></td>
                         <td>Brief self-introductions and research interests.</td>
                     </tr>
                     <tr>
                         <td>10:30–11:00</td>
-                        <td><span class="activity-title">Keynote Talk & Q&A</span></td>
-                        <td><strong>Tesh Goyal</strong> (Google DeepMind) presents on tools for long-term user evaluation.</td>
+                        <td><span class="activity-title">Keynote</span></td>
+                        <td>Researcher(s) presents on tools for long-term user evaluation.</td>
                     </tr>
                     <tr class="phase-header">
                         <td colspan="3"><strong>Phase 2 (11:00–12:00, 13:15–14:00) — Navigating the Challenges of Longitudinal Studies</strong></td>
                     </tr>
                     <tr>
                         <td>11:00–12:00</td>
-                        <td><span class="activity-title">Table Activity #1: Identifying Challenges</span></td>
+                        <td><span class="activity-title">Activity #1: Identifying Challenges</span></td>
                         <td>Group discussion on key challenges in longitudinal research.</td>
+                    </tr>
+                    <tr>
+                        <td>12:00–13:00</td>
+                        <td><span class="activity-title">Lunch</span></td>
+                        <td>Food! wow it's busan!</td>
                     </tr>
                     <tr>
                         <td>13:15–14:00</td>
@@ -175,20 +195,20 @@
                     </tr>
                     <tr>
                         <td>14:00–15:00</td>
-                        <td><span class="activity-title">Table Activity #2: Study Protocol Design</span></td>
-                        <td>Paired work on designing longitudinal study protocols.</td>
+                        <td><span class="activity-title">Activity #2: Study Protocol Design</span></td>
+                        <td>Design a longitudinal study protocol.</td>
                     </tr>
                     <tr>
                         <td>15:00–16:00</td>
-                        <td><span class="activity-title">Table Activity #3: System Prototyping</span></td>
-                        <td>Design AI tools for longitudinal data collection.</td>
+                        <td><span class="activity-title">Activity #3: System Prototyping</span></td>
+                        <td>Adapt an AI system for longitudinal data collection.</td> 
                     </tr>
                     <tr class="phase-header">
                         <td colspan="3"><strong>Phase 4 (16:00–17:00) — Reflection, Summary, and Future</span></td>
                         </tr>
                         <tr>
                             <td>16:00–16:40</td>
-                            <td><span class="activity-title">Table Activity #4: Reflection</span></td>
+                            <td><span class="activity-title">Activity #4: Reflection</span></td>
                             <td>Document insights and establish collaboration framework.</td>
                         </tr>
                         <tr>
@@ -205,27 +225,18 @@
             <div class="container">
                 <h2>4/ Organizing Committee</h2>
                 <p>This workshop is organized by a diverse team of leading researchers and practitioners from world-class academic institutions and pioneering industry labs. This unique blend of expertise is central to the workshop's mission of bridging the gap between foundational academic research and real-world industrial application. The organizers' collective experience spans human-computer interaction, artificial intelligence, computational design, and the deployment of large-scale, long-term systems. Providing direct links to their professional pages allows attendees to explore their work, fostering transparency and building confidence in the quality of the workshop.</p>
-                <p>If you have any questions, don't hesitate to reach out to <a href="mailto:long@columbia.edu,chilton@columbia.edu">{long, chilton}@columbia.edu</a>.
-                </p>
-                <ul class="organizer-list">
-                    <li><a href="https://iamtaolong.github.io/" target="_blank" rel="noopener noreferrer">Tao Long</a><span class="affiliation">Columbia University</span></li>
-                    <li><a href="https://sitong-wang.github.io/" target="_blank" rel="noopener noreferrer">Sitong Wang</a><span class="affiliation">Columbia University</span></li>
-                    <li><a href="https://emiliefab.re/" target="_blank" rel="noopener noreferrer">Émilie Fabre</a><span class="affiliation">University of Tokyo</span></li>
-                    <li><a href="https://www.tonyywang.com/" target="_blank" rel="noopener noreferrer">Tony Wang</a><span class="affiliation">Cornell University</span></li>
-                    <li><a href="https://anupsathya.com/" target="_blank" rel="noopener noreferrer">Anup Sathya</a><span class="affiliation">University of Chicago</span></li>
-                    <li><a href="https://jasonwunix.com/" target="_blank" rel="noopener noreferrer">Jason Wu</a><span class="affiliation">Apple</span></li>
-                    <li><a href="https://savvaspetridis.github.io/" target="_blank" rel="noopener noreferrer">Savvas Petridis</a><span class="affiliation">Google DeepMind</span></li>
-                    <li><a href="https://dingzeyu.li/" target="_blank" rel="noopener noreferrer">Dingzeyu Li</a><span class="affiliation">Adobe Research</span></li>
-                    <li><a href="https://tuhinjubcse.github.io/" target="_blank" rel="noopener noreferrer">Tuhin Chakrabarty</a><span class="affiliation">Salesforce AI Research</span></li>
-                    <li><a href="https://www.aalto.fi/en/people/yue-jiang" target="_blank" rel="noopener noreferrer">Yue Jiang</a><span class="affiliation">Aalto University & University of Utah</span></li>
-                    <li><a href="https://jingyi.me/" target="_blank" rel="noopener noreferrer">Jingyi Li</a><span class="affiliation">Pomona College</span></li>
-                    <li><a href="https://tifftseng.com/" target="_blank" rel="noopener noreferrer">Tiffany Tseng</a><span class="affiliation">Barnard College</span></li>
-                    <li><a href="https://www.media.mit.edu/people/ken_n/overview/" target="_blank" rel="noopener noreferrer">Ken Nakagaki</a><span class="affiliation">University of Chicago</span></li>
-                    <li><a href="https://qianyang.co/" target="_blank" rel="noopener noreferrer">Qian Yang</a><span class="affiliation">Cornell University</span></li>
-                    <li><a href="http://nikmartelaro.com/" target="_blank" rel="noopener noreferrer">Nikolas Martelaro</a><span class="affiliation">Carnegie Mellon University</span></li>
-                    <li><a href="https://www.stevens.edu/profile/jnickers" target="_blank" rel="noopener noreferrer">Jeffrey Nickerson</a><span class="affiliation">Stevens Institute of Technology</span></li>
-                    <li><a href="https://www.cs.columbia.edu/~chilton/" target="_blank" rel="noopener noreferrer">Lydia Chilton</a><span class="affiliation">Columbia University</span></li>
-                </ul>
+              
+
+            <p><span class="highlight highlight-bold"> &nbsp; &nbsp; If you have any questions, don't hesitate to reach out to <a href="mailto:long@cs.columbia.edu?subject=UIST2025%20Longitudinal%20Workshop%20Question" style="font-weight: bold; color:black"> &nbsp;&nbsp; 📧✨  long@cs.columbia.edu</a>.</span>
+            </p>
+            <br>
+            
+                <div class="organizer-grid" id="organizer-grid">
+                    <!-- Organizers will be loaded dynamically from CSV -->
+                </div>
+
+
+                
             </div>
         </section>
         
@@ -318,6 +329,94 @@
             // Initialize and start smooth rotation
             rotateClock();
             setInterval(rotateClock, 16); // 60fps for smooth movement
+        });
+
+        // Load and render organizers from CSV
+        document.addEventListener('DOMContentLoaded', function() {
+            async function loadOrganizers() {
+                try {
+                    const response = await fetch('organizers.csv');
+                    const csvText = await response.text();
+                    
+                    // Parse CSV with support for quoted fields
+                    const lines = csvText.trim().split('\n');
+                    const headers = lines[0].split(',').map(h => h.trim());
+                    const organizers = [];
+                    
+                    for (let i = 1; i < lines.length; i++) {
+                        const line = lines[i];
+                        const values = [];
+                        let current = '';
+                        let inQuotes = false;
+                        
+                        for (let j = 0; j < line.length; j++) {
+                            const char = line[j];
+                            if (char === '"') {
+                                inQuotes = !inQuotes;
+                            } else if (char === ',' && !inQuotes) {
+                                values.push(current.trim());
+                                current = '';
+                            } else {
+                                current += char;
+                            }
+                        }
+                        values.push(current.trim());
+                        
+                        const organizer = {};
+                        headers.forEach((header, index) => {
+                            organizer[header] = values[index] || '';
+                        });
+                        organizers.push(organizer);
+                    }
+                    
+                    // Render organizers
+                    const grid = document.getElementById('organizer-grid');
+                    if (grid) {
+                        grid.innerHTML = organizers.map(org => {
+                            // Handle multiple affiliations
+                            const affiliations = org.affiliation.split('|').map(a => a.trim());
+                            const logos = org.affiliation_logo.split('|').map(l => l.trim());
+                            
+                            const affiliationHTML = affiliations.map((affiliation, index) => {
+                                const logo = logos[index] || '';
+                                return `
+                                    <div class="organizer-affiliation">
+                                        ${logo ? `<img src="${logo}" 
+                                                      alt="${affiliation} logo" 
+                                                      class="affiliation-logo"
+                                                      onerror="this.style.display='none';">` : ''}
+                                        <span>${affiliation}</span>
+                                    </div>
+                                `;
+                            }).join('');
+                            
+                            return `
+                                <a href="${org.website}" target="_blank" rel="noopener noreferrer" class="organizer-card">
+                                    <img src="${org.profile_image}" 
+                                         alt="${org.name}" 
+                                         class="organizer-profile-image"
+                                         onerror="this.style.background='#f8f9fa';this.style.border='3px solid rgba(0,0,0,0.05)';this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwIiBoZWlnaHQ9IjEyMCIgdmlld0JveD0iMCAwIDEyMCAxMjAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMjAiIGhlaWdodD0iMTIwIiBmaWxsPSIjRjhGOUZBIi8+CjxjaXJjbGUgY3g9IjYwIiBjeT0iNDUiIHI9IjE1IiBmaWxsPSIjREVFMkU2Ii8+CjxwYXRoIGQ9Ik0zNSA5MEMzNSA3OCA0NSA2OCA2MCA2OEM3NSA2OCA4NSA3OCA4NSA5MEgzNVoiIGZpbGw9IiNERUUyRTYiLz4KPC9zdmc+';">
+                                    <div class="organizer-name">
+                                        ${org.name}
+                                    </div>
+                                    <div class="organizer-affiliations">
+                                        ${affiliationHTML}
+                                    </div>
+                                </a>
+                            `;
+                        }).join('');
+                    }
+                } catch (error) {
+                    console.error('Error loading organizers:', error);
+                    // Fallback to static content if CSV fails to load
+                    const grid = document.getElementById('organizer-grid');
+                    if (grid) {
+                        grid.innerHTML = '<p>Unable to load organizer information. Please refresh the page.</p>';
+                    }
+                }
+            }
+            
+            loadOrganizers();
         });
     </script>
     </html>
