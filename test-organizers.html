@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Organizers</title>
+    <style>
+        .test-card {
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin: 10px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <h1>Organizer Test</h1>
+    <div id="test-grid"></div>
+
+    <script>
+    async function testLoadOrganizers() {
+        try {
+            console.log('Attempting to load organizers.csv...');
+            const response = await fetch('organizers.csv');
+            console.log('Response status:', response.status);
+            
+            if (!response.ok) {
+                throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+            }
+            
+            const csvText = await response.text();
+            console.log('CSV content length:', csvText.length);
+            console.log('First 200 chars:', csvText.substring(0, 200));
+            
+            // Simple CSV parsing
+            const lines = csvText.trim().split('\n');
+            console.log('Number of lines:', lines.length);
+            
+            const headers = lines[0].split(',').map(h => h.trim());
+            console.log('Headers:', headers);
+            
+            const organizers = [];
+            for (let i = 1; i < lines.length; i++) {
+                const line = lines[i];
+                const values = [];
+                let current = '';
+                let inQuotes = false;
+                
+                for (let j = 0; j < line.length; j++) {
+                    const char = line[j];
+                    if (char === '"') {
+                        inQuotes = !inQuotes;
+                    } else if (char === ',' && !inQuotes) {
+                        values.push(current.trim());
+                        current = '';
+                    } else {
+                        current += char;
+                    }
+                }
+                values.push(current.trim());
+                
+                const organizer = {};
+                headers.forEach((header, index) => {
+                    organizer[header] = values[index] || '';
+                });
+                organizers.push(organizer);
+            }
+            
+            console.log('Parsed organizers:', organizers.length);
+            console.log('First organizer:', organizers[0]);
+            
+            // Render simple test cards
+            const grid = document.getElementById('test-grid');
+            grid.innerHTML = organizers.map(org => `
+                <div class="test-card">
+                    <h3>${org.name}</h3>
+                    <p>${org.affiliation}</p>
+                    <p><a href="${org.website}" target="_blank">Website</a></p>
+                    <img src="${org.profile_image}" alt="${org.name}" style="width:100px;height:100px;object-fit:cover;" 
+                         onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSIjRjhGOUZBIi8+Cjx0ZXh0IHg9IjUwIiB5PSI1NSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzY2NiI+Tm8gSW1hZ2U8L3RleHQ+Cjwvc3ZnPg==';">
+                </div>
+            `).join('');
+            
+        } catch (error) {
+            console.error('Error loading organizers:', error);
+            document.getElementById('test-grid').innerHTML = `<p style="color:red;">Error: ${error.message}</p>`;
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', testLoadOrganizers);
+    </script>
+</body>
+</html> 
